@@ -1,6 +1,5 @@
 #!/bin/bash
 #shopt -s nocasematch
-#url="http://www.sbmsecurities.com"
 #admin_list="admin_list1.txt"
 for list in $(cat admin_list.txt); do
 http_result=$(curl --silent http://www.exploreville.org.pk/"$list" | grep -oi "pass" | tr '[:upper:]' '[:lower:]' | uniq)
